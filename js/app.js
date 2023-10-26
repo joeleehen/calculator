@@ -1,4 +1,4 @@
-let cmdString = "";
+let cmdString = localStorage.getItem('cmdString') || "";
 
 document.getElementById("matConstructor").onsubmit = function(event) {
   event.preventDefault();
@@ -79,5 +79,27 @@ function calculate() {
   }
   cmdString = cmdString.slice(0, -1);
   cmdString += "])"
+  console.log(cmdString);
+  localStorage.setItem('cmdString', cmdString);
+}
+
+function operator(operation) {
+  if (cmdString.length > 0) {
+    switch(operation) {
+      case 'det':
+        cmdString += '.determinant()';
+        break;
+      case 'transpose':
+        cmdString += '.transpose()';
+        break;
+      case 'invert':
+        cmdString += '.invert()';
+        break;
+      case 'clear':
+        cmdString = "";
+        break;
+    }
+    localStorage.setItem('cmdString', cmdString);
+  }
   console.log(cmdString);
 }

@@ -8,14 +8,14 @@
   </head>
 <body>
     <div class='btn-row'>
-       <button>Determinant</button>
-       <button>Transpose</button>
-       <button>Invert</button>
-       <button>Add</button>
-       <button>Subtract</button>
-       <button>Multiply</button>
-       <button>Scalar Multiply</button>
-       <button>CLEAR</button>
+       <button onclick="operator('det')">Determinant</button>
+       <button onclick="operator('transpose')">Transpose</button>
+       <button onclick="operator('invert')">Invert</button>
+       <button onclick="operator('add')">Add</button>
+       <button onclick="operator('sub')">Subtract</button>
+       <button onclick="operator('mult')">Multiply</button>
+       <button onclick="operator('scalar')">Scalar Multiply</button>
+       <button onclick="operator('clear')">CLEAR</button>
     </div>
     <div id='constructError'>
       ERROR: check your dimensions!
