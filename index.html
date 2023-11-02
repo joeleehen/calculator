@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <script type='text/javascript' src='js/app.js' defer></script>
+  </head>
+<body>
+    <div class='btn-row'>
+       <button onclick="operator('det')">Determinant</button>
+       <button onclick="operator('transpose')">Transpose</button>
+       <button onclick="operator('invert')">Invert</button>
+       <button onclick="operator('add')">Add</button>
+       <button onclick="operator('sub')">Subtract</button>
+       <button onclick="operator('mult')">Multiply</button>
+       <button onclick="operator('scalar')">Scalar Multiply</button>
+       <button onclick="operator('clear')">CLEAR</button>
+    </div>
+    <div id='constructError'>
+      ERROR: check your dimensions!
+    </div>
+    <div>
+      <form id='matConstructor'>
+        <label for='xDim'>Dimensions: </label>
+        <input type='text' id="xDim" name="xDim">
+        <label for="yDim">x</label>
+        <input type='text' id='yDim' name="yDim">
+        <button type="submit">Create Matrix</button>
+      </form>
+    </div>
+    <div id="inputSpace">
+    <span id='stringSpace'></span>
+    <button onclick="run()" id='runBtn'>let's go!</button>
+    </div>
+    <button onclick="calculate()" id='calcBtn'>Calculate</button>
+    <div id="answerSpace">
+
+    </div>
+  </body>
+</html>
